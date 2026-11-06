@@ -1,0 +1,16 @@
+<h1>volam sa {{meno}}</h1>
+
+{% if vek < 18 %}
+<p>Nie som dospely</p>
+{% else %}
+<p>som dospely</p>
+{% endif %}
+<p>Mam {{vek}} rokov</p>
+<h2>Zaluby</h2>
+<ul>
+    {% for zaluba in zaluby %}
+    <li>{{zaluba}}</li>
+    {% empty %}
+    <li>Ziadne</li>
+    {% endfor %}
+</ul>

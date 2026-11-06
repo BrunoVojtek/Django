@@ -1,0 +1,6 @@
+<h1>{{meno}} {{priezvisko}}</h1>
+    {% for uloha in ulohy %}
+        <h2>{{uloha}}</h2>
+        {% empty %}
+        <h2>Ziadne</h2>
+    {% endfor %}
