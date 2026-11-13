@@ -1,0 +1,16 @@
+<form method="post">
+    {% csrf_token %}
+    <input type="number" name="a">
+    <select name="znamienko">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" name="b">
+    <button>Vypocitat</button>
+    {% if vysledok %}
+        <p>Vysledok: {{vysledok}}</p>
+    {% endif %}
+
+</form>

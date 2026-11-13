@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="rok">Rok narodenia</label>
+    <input type="text" name="rok" id="rok">
+    <button>Vypocitaj</button>
+</form>
+{% if vek %}
+    <p>Tvoj vek je {{vek}}</p>
+{% endif %}

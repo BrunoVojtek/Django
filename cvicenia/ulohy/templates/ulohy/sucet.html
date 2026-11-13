@@ -1,0 +1,10 @@
+<h1>Sucet dvoch cisel</h1>
+<form method="post">
+    {% csrf_token %}
+    <input type="number" name="a" required> +
+    <input type="number" name="b" required>
+    <button>Spocitat</button>
+</form>
+{% if vysledok %}
+    <p>Vysledok: {{vysledok}}</p>
+{% endif %}
