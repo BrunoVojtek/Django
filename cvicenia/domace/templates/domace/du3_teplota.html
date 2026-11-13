@@ -1,0 +1,20 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="teplota">Zadaj teplotu ktorú chceš previesť: </label>
+    <input type="text" name="teplota" id="teplota" required>
+    <br>
+    <label for="operacia">Zadaj ako chceš previesť: </label>
+    <select name="operacia" id="operacia">
+        <option value="CF">°C->°F</option>
+        <option value="FC">°F->°C</option>
+    </select>
+    <br>
+    <button>Previesť</button>    
+</form>
+
+{% if operacia == 'CF' %}
+ <p>Prevedená teplota je: {{vysledok}}°F</p>
+{% elif operacia == 'FC' %}
+ <p>Prevedená teplota je: {{vysledok}}°C</p>
+{% endif %}
+<p></p>
