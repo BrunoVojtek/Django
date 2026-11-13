@@ -1,0 +1,15 @@
+<h1>Meno: {{kontext.meno}}</h1>
+<h2>Trida: {{kontext.trieda}}</h2>
+<h2>Vek: {{kontext.vek}}</h2>
+<ol>
+    {% for predmet in kontext.predmety %}
+    <li>{{predmet}}</li>
+    {% empty %}
+    <li>Ziadne</li>
+    {% endfor %}
+</ol>
+{% if kontext.vek < 18 %}
+<p>Nie som plnoletý</p>
+{% else %}
+<p>Som plnoletý</p>
+{% endif %}
